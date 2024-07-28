@@ -6,11 +6,10 @@ import "./App.css";
 import UserIdManager from "./components/UserIdManager";
 
 const App = () => {
-  const notificationDefaultUrl = import.meta.env.BASE_URL;
+  const notificationDefaultUrl =
+    import.meta.env.VITE_BASE_URL || import.meta.env.BASE_URL;
   const webKey = import.meta.env.VITE_WEBKEY;
   const applicationName = import.meta.env.VITE_APPLICATION_NAME;
-
-  console.log({ notificationDefaultUrl, webKey, applicationName });
 
   return (
     <div className="App">
